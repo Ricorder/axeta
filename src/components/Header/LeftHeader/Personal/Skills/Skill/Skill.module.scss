@@ -1,0 +1,34 @@
+.blockSkill {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 44px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.skill {
+	display: flex;
+	justify-content: center;
+	height: 24px;
+	background: #333333;
+	border-radius: 4px;
+}
+
+.hover {
+	background: #666666;
+}
+
+.text {
+	color: white;
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.svg {
+	position: relative;
+	top: -37px;
+	left: 7px;
+}

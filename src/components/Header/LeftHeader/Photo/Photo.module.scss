@@ -1,0 +1,51 @@
+.blockPhoto {
+	display: flex;
+	margin-left: 156px;
+
+}
+
+.photoContainer {
+	cursor: pointer;
+	border: 4px solid rgb(255, 255, 255);
+	border-radius: 50%;
+	width: 168px;
+	height: 168px;
+}
+
+.photo {
+	border-radius: 50%;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.ellipse {
+	cursor: pointer;
+	position: relative;
+	left: 132px;
+	top: -160px;
+}
+
+.vector {
+	cursor: pointer;
+	position: relative;
+	left: 107px;
+	top: -163px;
+}
+
+.input {
+	cursor: pointer;
+	position: relative;
+	left: 83px;
+	top: -175px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	opacity: 0
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

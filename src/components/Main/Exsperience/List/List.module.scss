@@ -1,0 +1,21 @@
+@import '../../../../index.scss';
+
+.old {
+	cursor: pointer;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: $colorBlue;
+	border-bottom: 1px dotted $colorBlue;
+	&:hover {
+		color: $colorRed;
+		border: none;
+	}
+}
+
+.inputName {
+	display: inline-block;
+	width: 40px;
+}

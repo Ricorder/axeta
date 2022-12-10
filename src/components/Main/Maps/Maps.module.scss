@@ -1,0 +1,9 @@
+.maps {
+	width: 552px;
+	height: 200px;
+	border-radius: 6px;
+	overflow: hidden;
+	[class*="copyrights-pane"] {
+		display: none !important;
+	}
+}

@@ -1,0 +1,82 @@
+$deep-gray: rgba(0, 0, 0, 0.06);
+
+.personal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 8px;
+	width: 50%;
+	margin-top: 20px;
+}
+
+%name-font {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 48px;
+	margin: 0;
+}
+
+.inputName {
+	height: 45px;
+	width: inherit;
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+	@extend %name-font
+}
+
+.name {
+	@extend %name-font;
+	cursor: pointer;
+	&:hover {
+		background: $deep-gray;
+	}
+}
+
+%adress-font {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0;
+}
+
+.inputAdress {
+	display: block;
+	height: 100%;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+	@extend %adress-font;
+}
+
+.adress {
+	@extend %adress-font;
+	cursor: pointer;
+	&:hover {
+		background: $deep-gray;
+	}
+}
+
+.country {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0
+}
+
+.img {
+	width: 24px;
+	height: 18px;
+}
+
+.country {
+	display: flex;
+	align-items: center;
+}

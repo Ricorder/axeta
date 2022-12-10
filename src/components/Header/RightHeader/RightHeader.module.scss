@@ -1,0 +1,24 @@
+@import '../../../index.scss';
+
+.rightHeader {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 156px;
+	margin-top: 40px;
+	width: 50%;
+}
+
+.printer {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	height: 24px;
+	color: $colorBlue;
+	cursor: pointer;
+	&:hover {
+		color: $colorRed;
+		path {
+			fill: $colorRed;
+		}
+	}
+}

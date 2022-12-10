@@ -1,0 +1,17 @@
+.body {
+	display: grid;
+	grid-template: 
+	'. header .' 224px
+	'. main .' minmax(576px, auto)
+	/ auto 1440px auto;
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+.header {
+	grid-area: header;
+}
+
+.main {
+	grid-area: main;
+}

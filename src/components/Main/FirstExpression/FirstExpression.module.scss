@@ -1,0 +1,36 @@
+@import '../../../index.scss';
+
+.firstExpression {
+	
+}
+
+.p {
+	display: inline;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	width: 210px;
+}
+
+.div {
+	display: flex;
+}
+
+.open {
+	display: inline-flex;
+	align-self: flex-start;
+	width: 40px;
+	height: 32px;
+	opacity: 0.2;
+	position: relative;
+	left: 14px;
+}
+
+.close {
+	display: inline;
+	align-self: flex-end;
+	opacity: 0.2;
+	position: relative;
+	right: 10px;
+}

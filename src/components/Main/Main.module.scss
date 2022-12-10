@@ -1,0 +1,38 @@
+.main {
+	display: grid;
+	grid-template:
+		'portfio exsperience code availability' 288px
+		'first second map map' 288px;
+	margin-left: 156px;
+	margin-right: 156px;
+	margin-top: 56px;
+	gap: 24px;
+}
+
+.portfio {
+	grid-area: portfio;
+}
+
+.exsperience {
+	grid-area: exsperience;
+}
+
+.code {
+	grid-area: code;
+}
+
+.availability {
+	grid-area: availability;
+}
+
+.first {
+	grid-area: first;
+}
+
+.second {
+	grid-area: second;
+}
+
+.map {
+	grid-area: map;
+}
