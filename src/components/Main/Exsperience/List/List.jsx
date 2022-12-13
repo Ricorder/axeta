@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Input from '../../../../ui/Input/Input';
-import style from "./List.module.scss";
+import style from './List.module.scss';
 
 function List({ experience, text, setSkills, id }) {
 	const [edit, setEdit] = useState(true);
@@ -19,23 +19,25 @@ function List({ experience, text, setSkills, id }) {
 				.map((skill) => {
 					if (skill.id === id) {
 						return {
-						...skill,
-						experience: text,
+							...skill,
+							experience: text,
 						};
 					}
 					return skill;
 				})
-				.sort((a, b) => b.experience - a.experience)
+				.sort((a, b) => b.experience - a.experience),
 		);
 		setEdit(true);
 	};
-	
+
 	return (
 		<li>
 			<span>{text}</span>&nbsp;&nbsp;&nbsp;
-			{edit
-				?<span className={style.old} onClick={editExsperience}>{`${experience} ${experience === 1 ? "year" : "years"}`}</span>
-				: (
+			{edit ? (
+				<span className={style.old} onClick={editExsperience}>{`${experience} ${
+					experience === 1 ? 'year' : 'years'
+				}`}</span>
+			) : (
 				<Input
 					className={style.inputName}
 					enterText={experience}
@@ -43,9 +45,8 @@ function List({ experience, text, setSkills, id }) {
 					exit={editExsperience2}
 					length="14"
 					isNumber
-					/>
-				)
-			}
+				/>
+			)}
 		</li>
 	);
 }

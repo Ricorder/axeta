@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext } from 'react';
 
 const appContext = createContext()
 
@@ -6,23 +6,23 @@ const AppContextProvider = ({children}) => {
 	const [latitudeLongitude, setLatitudeLongitude] = useState([])
 	const [skills, setSkills] = useState([
 		{
-			id: "1",
-			text: "Kotlin",
+			id: '1',
+			text: 'Java',
+			experience: 15,
+		},
+				{
+			id: '2',
+			text: 'Kotlin',
 			experience: 11,
 		},
 		{
-			id: "2",
-			text: "Java",
-			experience: 15,
-		},
-		{
-			id: "3",
-			text: "Type Script",
+			id: '3',
+			text: 'Type Script',
 			experience: 4,
 		},
 		{
-			id: "4",
-			text: "Go",
+			id: '4',
+			text: 'Go',
 			experience: 3,
 		},
 	]);

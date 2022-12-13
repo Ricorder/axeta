@@ -1,6 +1,6 @@
-import style from "./Maps.module.scss";
-import cn from "classnames";
-import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
+import style from './Maps.module.scss';
+import cn from 'classnames';
+import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import { useAppContext } from '../../../contexts/appContext';
 
 function Maps({ className }) {
@@ -21,9 +21,7 @@ function Maps({ className }) {
 					width="552px"
 					height="200px"
 				>
-				<Placemark
-					geometry={center}
-				/>
+					<Placemark geometry={center} />
 				</Map>
 			</div>
 		</YMaps>

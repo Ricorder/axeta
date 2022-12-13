@@ -1,6 +1,6 @@
-import style from "./Code.module.scss";
-import cn from "classnames";
-import Title from "../../../ui/Title/Title";
+import style from './Code.module.scss';
+import cn from 'classnames';
+import Title from '../../../ui/Title/Title';
 
 function Code({ className }) {
 	const lt = <span className={style.bold}>&lt;</span>;
@@ -14,10 +14,10 @@ function Code({ className }) {
 	const grid = <span className={style.golden}>grid-area:</span>;
 	const str = (
 		<span className={style.golden}>
-		11&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;/&nbsp;&nbsp;span&nbsp;&nbsp;10&nbsp;&nbsp;
-		/&nbsp;&nbsp;span
+			11&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;/&nbsp;&nbsp;span&nbsp;&nbsp;10&nbsp;&nbsp;
+			/&nbsp;&nbsp;span
 		</span>
-  	);
+	);
 	const str2 = <span className={style.golden}>12;</span>;
 	const gt = <span className={style.bold}>&gt;</span>;
 

@@ -1,8 +1,8 @@
-import style from "./SecondExpression.module.scss";
-import cn from "classnames";
-import Title from "../../../ui/Title/Title";
-import { ReactComponent as OpenQuotes } from "../openQuote.svg";
-import { ReactComponent as CloseQuotes } from "../closeQuote.svg";
+import style from './SecondExpression.module.scss';
+import cn from 'classnames';
+import Title from '../../../ui/Title/Title';
+import { ReactComponent as OpenQuotes } from '../openQuote.svg';
+import { ReactComponent as CloseQuotes } from '../closeQuote.svg';
 
 function SecondExpression({ className }) {
 	return (
@@ -16,7 +16,7 @@ function SecondExpression({ className }) {
 				<CloseQuotes className={style.close} />
 			</div>
 		</div>
-	)
+	);
 }
 
 export default SecondExpression;

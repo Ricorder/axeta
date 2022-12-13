@@ -1,9 +1,8 @@
-import style from "./Availability.module.scss";
-import cn from "classnames";
-import Title from "../../../ui/Title/Title";
+import style from './Availability.module.scss';
+import cn from 'classnames';
+import Title from '../../../ui/Title/Title';
 
 function Availability({ className }) {
-
 	return (
 		<div className={cn(style.availability, className)}>
 			<Title>Availability</Title>

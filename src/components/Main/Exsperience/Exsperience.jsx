@@ -1,6 +1,6 @@
-import style from "./Exsperience.module.scss";
-import cn from "classnames";
-import Title from "../../../ui/Title/Title";
+import style from './Exsperience.module.scss';
+import cn from 'classnames';
+import Title from '../../../ui/Title/Title';
 import List from './List/List';
 import { useAppContext } from '../../../contexts/appContext';
 
@@ -12,7 +12,7 @@ function Exsperience({ className }) {
 			<Title>Experience</Title>
 			<ul className={style.li}>
 				{skills &&
-					skills.map(el => (
+					skills.map((el) => (
 						<List
 							key={el.id}
 							id={el.id}
@@ -20,8 +20,7 @@ function Exsperience({ className }) {
 							experience={el.experience}
 							setSkills={setSkills}
 						/>
-					))
-				}
+					))}
 			</ul>
 		</div>
 	);
