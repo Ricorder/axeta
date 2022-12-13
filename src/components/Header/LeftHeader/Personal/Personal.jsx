@@ -22,7 +22,8 @@ function Personal() {
 		setLatitudeLongitude(geocoderMetaData.Point.pos.split(" "));
 		const lang = geocoderMetaData.metaDataProperty.GeocoderMetaData.Address.country_code
 		setCountry(lang.toLowerCase());
-		setLocalLang(Object.values(Countries.findByCountryCode(lang).data[0].languages)[0]);
+		const languages = Object.values(Countries.findByCountryCode(lang).data[0].languages)
+		setLocalLang(languages.reduce((str, language) => str + ', ' + language));
 	};
 
 	useEffect(() => {
