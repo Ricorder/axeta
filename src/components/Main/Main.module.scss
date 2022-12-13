@@ -9,6 +9,54 @@
 	gap: 24px;
 }
 
+@media (max-width: 1440px) {
+	.main {
+		display: grid;
+		grid-template:
+			'portfio exsperience availability' 288px
+			'first second code' 288px
+			' map map map' 288px;
+		margin-left: 156px;
+		margin-right: 156px;
+		margin-top: 56px;
+		gap: 24px;
+	}
+}
+
+@media (max-width: 1300px) {
+	.main {
+		display: grid;
+		grid-template:
+			'portfio exsperience' 288px
+			'first second' 288px
+			'code availability' 288px
+			' map map' 288px;
+		margin-left: 156px;
+		margin-right: 156px;
+		margin-top: 56px;
+		gap: 24px;
+	}
+}
+
+@media (max-width: 900px) {
+	.main {
+		display: grid;
+		grid-template:
+			'portfio' auto
+			'exsperience' auto
+			'first' auto
+			'second' auto
+			'code' auto
+			'availability' auto
+			' map' auto;
+		// margin-left: 156px;
+		// margin-right: 156px;
+		margin-top: 56px;
+		gap: 24px;
+		justify-items: center;
+	}
+}
+
 .portfio {
 	grid-area: portfio;
 }

@@ -1,7 +1,13 @@
 .blockPhoto {
 	display: flex;
 	margin-left: 156px;
+}
 
+@media (max-width: 900px) {
+	.blockPhoto {
+		display: flex;
+		margin-left: 0px;
+	}
 }
 
 .photoContainer {

@@ -8,6 +8,38 @@
 	min-height: 100vh;
 }
 
+@media (max-width: 1440px) {
+	.body {
+		display: grid;
+		grid-template:
+			'. header .' 224px
+			'. main .' minmax(576px, auto) 
+			/ auto 1440px auto;
+		overflow: hidden;
+		min-height: 100vh;
+		justify-content: center;
+		justify-items: center;
+	}
+}
+
+@media (max-width: 900px) {
+	.body {
+		display: grid;
+		grid-template:
+			'. header .' 244px
+			'. main .' minmax(576px, auto) 
+			/ auto minmax(480px, auto) auto;
+		min-height: 100vh;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.body {
+		width: 480px;
+	}
+}
+
 .header {
 	grid-area: header;
 }

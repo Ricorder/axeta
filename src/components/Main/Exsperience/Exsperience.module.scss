@@ -1,6 +1,11 @@
 .exsperience {
 	width: 100%;
 }
+@media (max-width: 900px) {
+	.exsperience {
+		width: 40%;
+	}
+}
 
 .li {
 	font-family: 'Roboto';

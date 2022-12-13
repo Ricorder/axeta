@@ -8,15 +8,14 @@ function App() {
 	const handlePrint = useReactToPrint({
 		content: () => componentRef.current,
 		documentTitle: 'axeta-test',
-		onAfterPrint: () => alert('Print success')
 	});
 
 	return (
-    <div className={style.body} ref={componentRef}>
-      <Header className={style.header} handlePrint={handlePrint} />
-      <Main className={style.main} />
-    </div>
-  );
+		<div className={style.body} ref={componentRef}>
+			<Header className={style.header} handlePrint={handlePrint} />
+			<Main className={style.main} />
+		</div>
+	);
 }
 
 export default App;

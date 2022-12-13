@@ -8,6 +8,16 @@
 	width: 50%;
 }
 
+@media (max-width: 900px) {
+	.rightHeader {
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 156px;
+		margin-top: 10px;
+		width: 50%;
+	}
+}
+
 .printer {
 	display: flex;
 	gap: 10px;

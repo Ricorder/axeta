@@ -2,3 +2,22 @@
 	display: flex;
 	background-color: rgb(240, 241, 242);
 }
+
+@media (max-width: 900px) {
+	.header {
+		display: grid;
+		grid-template:
+			'rightHeader' 20px
+			'leftHeader' 224px;
+		padding-left: 156px;
+		padding-right: 156px;
+	}
+}
+
+.leftHeader {
+	grid-area: leftHeader;
+}
+
+.rightHeader {
+	grid-area: rightHeader;
+}

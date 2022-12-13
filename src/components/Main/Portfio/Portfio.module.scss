@@ -4,6 +4,12 @@
 	width: 90%;
 }
 
+@media (max-width: 900px) {
+	.portfio {
+		width: 40%;
+	}
+}
+
 a {
 	text-decoration: none;
 	color: rgba(52, 131, 204, 1);
