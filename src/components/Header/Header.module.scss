@@ -1,6 +1,6 @@
 .header {
 	display: flex;
-	background-color: rgb(240, 241, 242);
+	background-color: var(--header)
 }
 
 @media (max-width: 900px) {

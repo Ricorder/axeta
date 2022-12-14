@@ -33,6 +33,7 @@ function Input({ add, exit, enterText, length, className, isNumber }) {
 		<div
 			className={cn(style.blockInput, {
 				[style.inline]: isNumber === true,
+				[style.blockInputError]: okOrError === true,
 			})}
 		>
 			<input
@@ -48,10 +49,10 @@ function Input({ add, exit, enterText, length, className, isNumber }) {
 			{!okOrError ? (
 				text && <Ok className={style.svg} />
 			) : (
-				<>
+				<div className={style.blockError}>
 					<Error className={style.svg} />
 					{!isNumber && <p className={style.error}>Error Description</p>}
-				</>
+				</div>
 			)}
 		</div>
 	);

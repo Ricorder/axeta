@@ -73,7 +73,7 @@ function Personal() {
 						enterText={name}
 						add={addNameChange}
 						exit={editNameChange2}
-						length="14"
+						length="18"
 					/>
 				)}
 			</div>
