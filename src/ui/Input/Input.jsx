@@ -33,7 +33,6 @@ function Input({ add, exit, enterText, length, className, isNumber }) {
 		<div
 			className={cn(style.blockInput, {
 				[style.inline]: isNumber === true,
-				[style.blockInputError]: okOrError === true,
 			})}
 		>
 			<input

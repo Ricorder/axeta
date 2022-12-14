@@ -8,10 +8,6 @@
 	}
 }
 
-.blockInputError {
-	align-items: flex-end;
-}
-
 .inline {
 	display: inline-flex;
 	width: 10%;
@@ -48,4 +44,5 @@
 	display: flex;
 	cursor: default;
 	pointer-events: none;
+	align-items: center;
 }
