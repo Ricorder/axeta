@@ -1,31 +1,15 @@
-import { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext, useEffect } from 'react';
 
 const appContext = createContext()
 
 const AppContextProvider = ({children}) => {
 	const [latitudeLongitude, setLatitudeLongitude] = useState([])
-	const [skills, setSkills] = useState([
-		{
-			id: '1',
-			text: 'Java',
-			experience: 15,
-		},
-				{
-			id: '2',
-			text: 'Kotlin',
-			experience: 11,
-		},
-		{
-			id: '3',
-			text: 'Type Script',
-			experience: 4,
-		},
-		{
-			id: '4',
-			text: 'Go',
-			experience: 3,
-		},
-	]);
+	const [skills, setSkills] = useState(JSON.parse(localStorage.getItem('skills')));
+
+	useEffect(() => {
+		localStorage.setItem('skills', JSON.stringify(skills));
+		setSkills(JSON.parse(localStorage.getItem('skills')));
+	}, [skills]);
 
 	const add = (text) => {
 		setSkills((prev) => {

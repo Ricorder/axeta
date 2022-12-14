@@ -1,15 +1,25 @@
 import style from './Photo.module.scss';
 import { ReactComponent as Ellipse } from './ellipse.svg';
 import { ReactComponent as Vector } from './vector.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Photo() {
+	console.log('Photo');
 	const [isShown, setIsShown] = useState(false);
 	const [selectedImage, setSelectedImage] = useState(null);
 
-	const addImage = (event) => {
-		setSelectedImage(event.target.files[0]);
+	const addImage = async (e) => {
+		
+		const reader = new FileReader();
+		reader.addEventListener('load', () => {
+			localStorage.setItem('image', reader.result);
+			setSelectedImage(localStorage.getItem('image'));
+		});
+		reader.readAsDataURL(e.target.files[0]);
 	};
+	useEffect(() => {
+		setSelectedImage(localStorage.getItem('image'));
+	}, []);
 
 	return (
 		<div className={style.blockPhoto}>
@@ -23,7 +33,7 @@ function Photo() {
 						<img
 							className={style.img}
 							alt=""
-							src={URL.createObjectURL(selectedImage)}
+							src={selectedImage}
 							onMouseEnter={() => setIsShown(true)}
 							onMouseLeave={() => setIsShown(false)}
 						/>
