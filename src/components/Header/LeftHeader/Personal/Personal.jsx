@@ -95,7 +95,7 @@ function Personal() {
 					src={`https://flagcdn.com/24x18/${country}.png`}
 					width="24"
 					height="18"
-					alt="South Africa"
+					alt=""
 				></img>
 				&nbsp;&nbsp;
 				<p className={style.country}>{localLang}</p>
