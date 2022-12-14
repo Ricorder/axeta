@@ -14,6 +14,7 @@ a {
 	&:hover {
 		color: var(--red);
 	}
+	cursor: var(--cursor);
 }
 .ul {
 	list-style-type: '- ';

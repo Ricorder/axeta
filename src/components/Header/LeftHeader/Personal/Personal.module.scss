@@ -31,7 +31,7 @@
 
 .name {
 	@extend %name-font;
-	cursor: pointer;
+	cursor: var(--cursor);
 	&:hover {
 		background: var(--deep-gray);
 	};
@@ -59,7 +59,7 @@
 
 .adress {
 	@extend %adress-font;
-	cursor: pointer;
+	cursor: var(--cursor);
 	&:hover {
 		background: var(--deep-gray);
 	}

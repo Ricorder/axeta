@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: var(--font-family);
+	cursor: var(--cursor);
 }
 
 :root {
@@ -18,4 +19,5 @@ body {
 	--truly-red: rgba(255, 0, 0, 1);
 	--header: rgb(240, 241, 242);
 	--input: rgba(0, 0, 0, 0.06);
+	--cursor: url('../public/cursor.png') 13 13, pointer;
 }
