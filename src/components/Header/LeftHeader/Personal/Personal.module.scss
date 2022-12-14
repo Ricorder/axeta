@@ -7,6 +7,12 @@
 	margin-top: 20px;
 }
 
+@media (max-width: 900px) {
+	.personal {
+		width: 100%;
+	}
+}
+
 %name-font {
 	font-weight: 500;
 	font-size: 40px;

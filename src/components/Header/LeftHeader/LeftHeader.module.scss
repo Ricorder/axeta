@@ -10,9 +10,8 @@
 	.leftHeader {
 		display: grid;
 		grid-template:
-			'photo' auto
-			'personal' auto;
-
-		
+		'photo' auto
+		'personal' auto;
+		width: 100%;
 	}
 }
