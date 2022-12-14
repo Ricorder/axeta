@@ -26,7 +26,7 @@ function Input({ add, exit, enterText, length, className, isNumber }) {
 		}
 	};
 
-	const checkSymbol = /^(?=.*[!@*#$%^&()+=//\\\][{}?><":;|])/;
+	const checkSymbol = /^(?=.*[!~@*№#$%^&()+=//\\\][{}?><":;|])/;
 	const okOrError = checkSymbol.test(text);
 
 	return (

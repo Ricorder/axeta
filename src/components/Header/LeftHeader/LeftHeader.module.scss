@@ -5,3 +5,14 @@
 	gap: 24px;
 	width: 80%;
 }
+
+@media (max-width: 900px) {
+	.leftHeader {
+		display: grid;
+		grid-template:
+			'photo' auto
+			'personal' auto;
+
+		
+	}
+}
