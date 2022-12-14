@@ -7,8 +7,8 @@ import { useAppContext } from '../../../../contexts/appContext';
 import { useEffect } from 'react';
 
 function Personal() {
-	const [name, setName] = useState('Андрей Бреслав');
-	const [adress, setAdress] = useState('Котлин');
+	const [name, setName] = useState(JSON.parse(localStorage.getItem('name')) ? JSON.parse(localStorage.getItem('name')) : 'Ваше имя');
+	const [adress, setAdress] = useState(JSON.parse(localStorage.getItem('adress')) ? JSON.parse(localStorage.getItem('adress')) : 'Укажите адресс');
 	const [editName, setEditName] = useState(true);
 	const [editAdress, setEditAdress] = useState(true);
 	const [country, setCountry] = useState('');
@@ -16,19 +16,13 @@ function Personal() {
 	const { setLatitudeLongitude } = useAppContext();
 
 	const sendCoordinate = async (path) => {
-		const response1 = await fetch(
-			`https://geocode-maps.yandex.ru/1.x/?apikey=3914f4e5-0fd3-41be-a18e-bfff93e243c6&format=json&geocode=${path}`,
-		);
+		const response1 = await fetch(`https://geocode-maps.yandex.ru/1.x/?apikey=3914f4e5-0fd3-41be-a18e-bfff93e243c6&format=json&geocode=${path}`);
 		const coordinate = await response1.json();
-		const geocoderMetaData =
-			coordinate.response.GeoObjectCollection.featureMember[0].GeoObject;
+		const geocoderMetaData = coordinate.response.GeoObjectCollection.featureMember[0].GeoObject;
 		setLatitudeLongitude(geocoderMetaData.Point.pos.split(' '));
-		const lang =
-			geocoderMetaData.metaDataProperty.GeocoderMetaData.Address.country_code;
+		const lang = geocoderMetaData.metaDataProperty.GeocoderMetaData.Address.country_code;
 		setCountry(lang.toLowerCase());
-		const languages = Object.values(
-			Countries.findByCountryCode(lang).data[0].languages,
-		);
+		const languages = Object.values(Countries.findByCountryCode(lang).data[0].languages);
 		setLocalLang(languages.reduce((str, language) => str + ', ' + language));
 	};
 
@@ -45,6 +39,7 @@ function Personal() {
 	};
 
 	const addNameChange = (text) => {
+		localStorage.setItem('name', JSON.stringify(text));
 		setName(text);
 		setEditName(true);
 	};
@@ -57,6 +52,7 @@ function Personal() {
 		setEditAdress(true);
 	};
 	const addAdressChange = (text) => {
+		localStorage.setItem('adress', JSON.stringify(text));
 		setAdress(text);
 		sendCoordinate(text);
 		setEditAdress(true);
