@@ -17,7 +17,7 @@ function Skills() {
 		setEdit(false);
 	};
 
-	const skillsLength = skills.length <= 3;
+	const skillsLength = skills.length <= 4;
 
 	return (
 		<div className={style.skills}>

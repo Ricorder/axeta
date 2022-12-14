@@ -4,7 +4,7 @@ import Title from '../../../ui/Title/Title';
 
 function Code({ className }) {
 	const lt = <span className={style.bold}>&lt;</span>;
-	const slash = <span>/</span>;
+	const slash = <span className={style.bold}>/</span>;
 	const div = <span className={style.div}>div</span>;
 	const clas = <span className={style.clas}>class</span>;
 	const styles = <span className={style.clas}>style</span>;

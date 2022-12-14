@@ -28,7 +28,6 @@ function Input({ add, exit, enterText, length, className, isNumber }) {
 
 	const checkSymbol = /^(?=.*[!@*#$%^&()+=//\\\][{}?><":;|])/;
 	const okOrError = checkSymbol.test(text);
-	const show = text && <Ok className={style.svg} />;
 
 	return (
 		<div
@@ -38,20 +37,21 @@ function Input({ add, exit, enterText, length, className, isNumber }) {
 		>
 			<input
 				value={text}
-				className={cn(style.input, className)}
+				className={cn(style.input, className, {
+					[style.errorInput]: okOrError === true,
+				})}
 				onChange={handleChange}
 				maxLength={length}
 				onKeyDown={addChange}
 				type="text"
 			/>
 			{!okOrError ? (
-				show ? (
-					show
-				) : (
-					<Ok className={style.svg} />
-				)
+				text && <Ok className={style.svg} />
 			) : (
-				<Error className={style.svg} />
+				<>
+					<Error className={style.svg} />
+					{!isNumber && <p className={style.error}>Error Description</p>}
+				</>
 			)}
 		</div>
 	);
